@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/badge.css'
+import './badge.css'
 
 function Badge({ children, color }: { children: React.ReactNode, color: string }) {
     return (

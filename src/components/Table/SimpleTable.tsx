@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import '../styles/sampletable.css'
+import './sampletable.css'
 
 type column = {
     header: string
