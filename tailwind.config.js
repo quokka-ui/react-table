@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  important: '.quk-ui',
-  prefix: 'quk-ui-',
+  // important: 'quk-ui',
+  // prefix: 'quk-ui-',
   content: [
-    "./src/**/*.{ts,tsx}"
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},

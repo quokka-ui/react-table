@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import './sampletable.css'
+
+import '../../index.css'
 
 type column = {
     header: string
@@ -15,25 +16,25 @@ type TableProps = {
 
 function Table({ columnDef, data }: TableProps): JSX.Element {
     return (
-        <div className="sample-table-wrapper">
-            <table className="sample-table">
-                <thead className="sample-table-thead">
+        <div className="quk-ui-overflow-x-auto bg-blue-400">
+            <table className="quk-ui-border-spacing-0 quk-ui-w-full quk-ui-h-full">
+                <thead className="quk-ui-bg-gray-200">
                     {
                         columnDef.map((col, index) => (
-                            <th className="sample-table-th" style={{ minWidth: col.width }} key={index}>{col.header}</th>
+                            <th className="quk-ui-font-semibold quk-ui-text-left quk-ui-p-2 quk-ui-border-b-2 quk-ui-border-l-2 quk-ui-border-b-slate-200 quk-ui-border-l-slate-200" style={{ minWidth: col.width }} key={index}>{col.header}</th>
                         ))
                     }
                 </thead>
-                <tbody className="sample-table-tbody">
+                <tbody className="">
                     {
                         data.map((row, index) => (
-                            <tr className="sample-table-tr" key={index}>
+                            <tr className="hover:quk-ui-bg-slate-400" key={index}>
                                 {
                                     columnDef.map((cell, index) => {
                                         if (cell.render) {
-                                            return <td className="sample-table-td" style={{ minWidth: cell.width }} key={index}>{cell.render(row)}</td>
+                                            return <td className="quk-ui-p-3 quk-ui-border-b-2 quk-ui-border-b-slate-200" style={{ minWidth: cell.width }} key={index}>{cell.render(row)}</td>
                                         }
-                                        return <td className="sample-table-td" style={{ minWidth: cell.width }} key={index}>{row[cell.field]}</td>
+                                        return <td className="sample-table-td !quk-ui-bg-blue-400" style={{ minWidth: cell.width, }} key={index}>{row[cell.field]}</td>
                                     })
                                 }
                             </tr>
