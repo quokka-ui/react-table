@@ -16,19 +16,81 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        // columnDef: [
-        //     { header: "Name", field: "name", width: 200 },
-        //     { header: "Age", field: "age", width: 100 },
-        //     { header: "Country", field: "country", width: 200 },
-        //     { header: "City", field: "city", width: 200 },
-        //     { header: "State", field: "state", width: 200 },
-        // ],
-        // data: [
-        //     { name: "John Doe", age: 25, country: "United States", city: "New York", state: "New York" },
-        //     { name: "Jane Doe", age: 22, country: "United States", city: "Los Angeles", state: "California" },
-        //     { name: "Alice", age: 30, country: "United Kingdom", city: "London", state: "London" },
-        //     { name: "Bob", age: 28, country: "United Kingdom", city: "Manchester", state: "Manchester" },
-        //     { name: "Charlie", age: 35, country: "Australia", city: "Sydney", state: "New South Wales" },
-        // ]
+        mainColumns: ['Original Text', 'GPT Summary', 'Claude Summary', 'Llama Summary'],
+        subColumns: ['Coherence', 'Clarity', 'Relevance', 'Correctness', 'Average'],
+        data: [
+            {
+            originalText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            gptSummary: { coherence: 4, clarity: 5, relevance: 4, correctness: 5, average: 4.5 },
+            claudeSummary: { coherence: 5, clarity: 4, relevance: 5, correctness: 4, average: 4.5 },
+            llamaSummary: { coherence: 3, clarity: 4, relevance: 4, correctness: 4, average: 3.75 },
+            },
+            {
+            originalText: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            gptSummary: { coherence: 5, clarity: 4, relevance: 5, correctness: 4, average: 4.5 },
+            claudeSummary: { coherence: 4, clarity: 5, relevance: 4, correctness: 5, average: 4.5 },
+            llamaSummary: { coherence: 4, clarity: 3, relevance: 5, correctness: 4, average: 4 },
+            },
+            {
+            originalText: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+            gptSummary: { coherence: 3, clarity: 4, relevance: 5, correctness: 4, average: 4 },
+            claudeSummary: { coherence: 5, clarity: 5, relevance: 4, correctness: 5, average: 4.75 },
+            llamaSummary: { coherence: 4, clarity: 4, relevance: 3, correctness: 5, average: 4 },
+            },
+            {
+            originalText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            gptSummary: { coherence: 4, clarity: 5, relevance: 4, correctness: 5, average: 4.5 },
+            claudeSummary: { coherence: 5, clarity: 4, relevance: 5, correctness: 4, average: 4.5 },
+            llamaSummary: { coherence: 3, clarity: 4, relevance: 4, correctness: 4, average: 3.75 },
+            },
+            {
+            originalText: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            gptSummary: { coherence: 5, clarity: 4, relevance: 5, correctness: 4, average: 4.5 },
+            claudeSummary: { coherence: 4, clarity: 5, relevance: 4, correctness: 5, average: 4.5 },
+            llamaSummary: { coherence: 4, clarity: 3, relevance: 5, correctness: 4, average: 4 },
+            },
+            {
+            originalText: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+            gptSummary: { coherence: 3, clarity: 4, relevance: 5, correctness: 4, average: 4 },
+            claudeSummary: { coherence: 5, clarity: 5, relevance: 4, correctness: 5, average: 4.75 },
+            llamaSummary: { coherence: 4, clarity: 4, relevance: 3, correctness: 5, average: 4 },
+            },
+            {
+            originalText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            gptSummary: { coherence: 4, clarity: 5, relevance: 4, correctness: 5, average: 4.5 },
+            claudeSummary: { coherence: 5, clarity: 4, relevance: 5, correctness: 4, average: 4.5 },
+            llamaSummary: { coherence: 3, clarity: 4, relevance: 4, correctness: 4, average: 3.75 },
+            },
+            {
+            originalText: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            gptSummary: { coherence: 5, clarity: 4, relevance: 5, correctness: 4, average: 4.5 },
+            claudeSummary: { coherence: 4, clarity: 5, relevance: 4, correctness: 5, average: 4.5 },
+            llamaSummary: { coherence: 4, clarity: 3, relevance: 5, correctness: 4, average: 4 },
+            },
+            {
+            originalText: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+            gptSummary: { coherence: 3, clarity: 4, relevance: 5, correctness: 4, average: 4 },
+            claudeSummary: { coherence: 5, clarity: 5, relevance: 4, correctness: 5, average: 4.75 },
+            llamaSummary: { coherence: 4, clarity: 4, relevance: 3, correctness: 5, average: 4 },
+            },
+            {
+            originalText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            gptSummary: { coherence: 4, clarity: 5, relevance: 4, correctness: 5, average: 4.5 },
+            claudeSummary: { coherence: 5, clarity: 4, relevance: 5, correctness: 4, average: 4.5 },
+            llamaSummary: { coherence: 3, clarity: 4, relevance: 4, correctness: 4, average: 3.75 },
+            },
+            {
+            originalText: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            gptSummary: { coherence: 5, clarity: 4, relevance: 5, correctness: 4, average: 4.5 },
+            claudeSummary: { coherence: 4, clarity: 5, relevance: 4, correctness: 5, average: 4.5 },
+            llamaSummary: { coherence: 4, clarity: 3, relevance: 5, correctness: 4, average: 4 },
+            },
+            {
+            originalText: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+            gptSummary: { coherence: 3, clarity: 4, relevance: 5, correctness: 4, average: 4 },
+            claudeSummary: { coherence: 5, clarity: 5, relevance: 4, correctness: 5, average: 4.75 },
+            llamaSummary: { coherence: 4, clarity: 4, relevance: 3, correctness: 5, average: 4 },
+            },
+        ]
     }
 }
