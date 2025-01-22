@@ -6,10 +6,8 @@ type DataGridProps = {
     mainColumns: string[]
     subColumns: string[]
     data: {
-        originalText: string,
-        gptSummary: { coherence: number, clarity: number, relevance: number, correctness: number, average: number },
-        claudeSummary: { coherence: number, clarity: number, relevance: number, correctness: number, average: number },
-        llamaSummary: { coherence: number, clarity: number, relevance: number, correctness: number, average: number },
+        descriptionColumn: string,
+        [mainCol: string]: { [key: string]: string | number } | string,
     }[]
 }
 
@@ -42,9 +40,12 @@ export default function DataGrid({ mainColumns, subColumns, data }: DataGridProp
         return false;
     }
 
+    console.log(`grid grid-cols-[200px_repeat(${(mainColumns.length - 1) * subColumns.length},minmax(50px,1fr))] gap-0 select-none`);
+
+
     return (
         <div className="w-full h-[500px] overflow-auto relative max-w-[calc(100vw-2rem)]">
-            <div className="grid grid-cols-[300px_repeat(15,minmax(100px,1fr))] gap-0 select-none" role="table" aria-label="Summary Comparison">
+            <div className={`grid grid-cols-[200px_repeat(20,minmax(50px,1fr))] gap-0 select-none`} role="table" aria-label="Summary Comparison">
                 <div className="contents sticky top-0 z-30" role="row">
                     <div className="sticky left-0 top-0 z-40 bg-gray-200 p-2 font-bold border border-gray-300" role="columnheader">
                         {mainColumns[0]}
@@ -84,7 +85,7 @@ export default function DataGrid({ mainColumns, subColumns, data }: DataGridProp
                             onMouseEnter={() => setHighlightedCell({ row: rowIndex, col: 0, mainCol: 0 })}
                             onMouseLeave={() => setHighlightedCell({ row: null, col: null, mainCol: null })}
                         >
-                            {row.originalText}
+                            {row.descriptionColumn}
                         </div>
                         {Object.entries(row)
                             .slice(1)

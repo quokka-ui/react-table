@@ -639,8 +639,8 @@ video {
           user-select: none;
 }
 
-.grid-cols-\[300px_repeat\(15\2c minmax\(100px\2c 1fr\)\)\] {
-  grid-template-columns: 300px repeat(15,minmax(100px,1fr));
+.grid-cols-\[200px_repeat\(20\2c minmax\(50px\2c 1fr\)\)\] {
+  grid-template-columns: 200px repeat(20,minmax(50px,1fr));
 }
 
 .content-center {
